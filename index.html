@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -17,7 +21,7 @@
     <div id="sidebar">
         <ul>
             <li><a onclick="mostrarTabla()"><i class="fa fa-check fa-fw"></i> Tabla</a></li>
-            <li><a href=""><i class="fa fa-address-card fa-fw"></i> Configuracion</a></li>
+            <li><a onclick="mostrarMapa()"><i class="fa fa-address-card fa-fw"></i> Configuracion</a></li>
             <li><a href=""><i class="fa fa-wrench"></i> Tools</a></li>
             <li><a href=""><i class="fa fa-gears"> link 1</i></a></li>
         </ul>
@@ -28,6 +32,7 @@
         <div class="contenido">
             <h1>Hola mundo</h1>
             <div id="tabla" style="display: none;"></div>
+            <div id="mapa" style="display: block;"></div>
         </div>
     </div>
 
@@ -37,6 +42,7 @@
 
     <script>
      $('#tabla').load('tabla.html');
+     $('#mapa').load('mapa.html');
     
     $('#menu-toggle').on('click', function() {
     var sidebar = document.getElementById('sidebar');
@@ -54,8 +60,16 @@
     function mostrarTabla(){
    
     document.getElementById('tabla').style.display = 'block';
-    
-}
+    }
+
+    function mostrarMapa(){
+   
+   document.getElementById('mapa').style.display = 'block';
+   }
+
+
+
+
     </script>
 </body>
 </html>

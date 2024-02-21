@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 80%;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        .red-icon {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ubicacion del Movil</h1>
+    <div id="map"></div>
+
+
+    <script>
+
+        // se crea el objeto mymap con centro y zoom
+        var mymap = L.map('map').setView([-33.4652183, -70.6824183], 15);
+
+        // Añadir capa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(mymap);
+
+        // se genera el icono del bus como marcador
+        var busIcon = L.divIcon({
+            className: 'fa-icon , red-icon',
+            html: '<i class="fa fa-car fa-2x"></i>',
+            iconSize: [50, 50],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -30]
+        });
+        // se agrega el marcador al mapa
+        var marker = L.marker([-33.4652183, -70.6824183], { icon: busIcon }).addTo(mymap);
+
+        // Añadir un popup al marcador
+        marker.bindPopup("<b>BCBC-12</b>").openPopup();
+    </script>
+</body>
+
+</html>
