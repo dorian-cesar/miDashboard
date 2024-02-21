@@ -1,0 +1,142 @@
+:root {
+    --main-bg-color: #1d4355;
+    --navbar-bg-color: #289DD2;
+    --sidebar-bg-color: #072634;
+    --btn-bg-gradient-start: rgba(0,74,173,1);
+    --btn-bg-gradient-end: rgba(65,193,186,1);
+    --table-bg-color: #b2d6e6;
+    --overlay-bg-color: rgba(0, 0, 0, 0.5);
+    --modal-bg-color: #1d4355;
+    --input-shadow-color: rgba(0, 0, 0, 0.5);
+    --sel-info-bg-color: #1d4355;
+    --sel-info-border-color: #41c1ba;
+    --text-color: white;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color) ;
+    color: var(--text-color);
+    font-family: sans-serif
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: var(--navbar-bg-color);
+    height: 70px;
+  }
+
+  #navbar a {
+    float: right;
+    color: var(--text-color);
+   
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 70px;
+    margin-right: 40px;
+    
+  }
+
+  #navbar a:hover {
+    color: #072634;
+  }
+
+  #navbar #Logo {
+   position: absolute;
+    margin-left: 300px;
+    font-size: 30px;
+    color: var(--text-color);
+    line-height: 70px;
+  }
+
+  
+#sidebar {
+    height: 100%;
+    width: 250px;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: var(--sidebar-bg-color);
+    padding-top: 20px;
+    color: var(--text-color);
+    transition: left 0.3s ease;
+  }
+
+  #sidebar ul {
+    margin-top: 70px;
+    list-style: none;
+    
+    margin-left: 0;
+  }
+
+  #sidebar ul a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text-color);
+    display: block;
+  }
+
+  #sidebar ul a:hover{
+  
+    background-color: var(--main-bg-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+    
+  
+
+  #menu-toggle {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+
+  #content .contenido {
+    margin: auto;
+    text-align: center;
+  }
+
+  .btnsub {
+    width: 90px;
+    border: 1px solid var(--sel-info-border-color);
+    border-radius: 25px;
+    margin: 5px;
+    margin-left: 10px;
+    display: inline;
+    background: var(--main-bg-color);
+    color: var(--text-color);
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .btnsub:hover {
+    background-color: var(--navbar-bg-color);
+  }
+
+
+  table {
+   
+    margin: auto;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 10px;
+    border-collapse: collapse;
+    text-align: center;
+   
+    
+  }
+  
+  table tr th {
+    border: 1px solid var(--navbar-bg-color);
+    padding: 10px;
+  }
+  
+  table tr td {
+    padding: 5px;
+    border: 1px solid var(--navbar-bg-color);
+   
+    color: var(--sel-info-border-color);
+  }

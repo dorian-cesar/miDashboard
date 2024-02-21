@@ -1,0 +1,7 @@
+PHP Fatal error:  Uncaught mysqli_sql_exce
+ption: MySQL server has gone away in /opt/bitnami/apache/htdocs/integracion_ventana/lpf-Ventana.php:16
+Stack trace:
+#0 /opt/bitnami/apache/htdocs/integracion_ventana/lpf-Ventana.php(16): mysqli_query()
+#1 {main}
+  thrown in /opt/bitnami/apache/htdocs/integracion_ventana/lpf-Ventana.php on line 16
+255 bitnami@ip-172-26-12-135:~/htdocs/integracion_ventana$ 
